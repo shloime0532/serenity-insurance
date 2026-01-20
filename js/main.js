@@ -204,7 +204,7 @@ function initBackToTop() {
 }
 
 /**
- * Contact Form (Visual Only - Opens Email)
+ * Contact Form (Netlify Forms)
  */
 function initContactForm() {
     const form = document.getElementById('contactForm');
@@ -215,27 +215,25 @@ function initContactForm() {
         e.preventDefault();
 
         // Get form data
-        const name = form.querySelector('#name').value;
-        const email = form.querySelector('#email').value;
-        const phone = form.querySelector('#phone').value;
-        const service = form.querySelector('#service').value;
-        const message = form.querySelector('#message').value;
+        const formData = new FormData(form);
 
-        // Build email body
-        const subject = encodeURIComponent('Quote Request from ' + name);
-        const body = encodeURIComponent(
-            'Name: ' + name + '\n' +
-            'Email: ' + email + '\n' +
-            'Phone: ' + phone + '\n' +
-            'Service: ' + service + '\n\n' +
-            'Message:\n' + message
-        );
-
-        // Open email client
-        window.location.href = 'mailto:david@serenityins.com?subject=' + subject + '&body=' + body;
-
-        // Show success feedback
-        showFormSuccess(form, 'Opening your email client...');
+        // Submit to Netlify
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(formData).toString()
+        })
+        .then(function(response) {
+            if (response.ok) {
+                showFormSuccess(form, 'Message sent successfully! We\'ll be in touch soon.');
+                form.reset();
+            } else {
+                showFormError(form, 'Something went wrong. Please try again.');
+            }
+        })
+        .catch(function(error) {
+            showFormError(form, 'Something went wrong. Please try again.');
+        });
     });
 }
 
@@ -286,6 +284,7 @@ function showFormSuccess(form, message) {
         font-weight: 500;
         z-index: 10;
         animation: fadeIn 0.3s ease;
+        text-align: center;
     `;
 
     // Add animation keyframes if not exists
@@ -305,10 +304,40 @@ function showFormSuccess(form, message) {
     form.style.position = 'relative';
     form.appendChild(successEl);
 
-    // Remove after 3 seconds
+    // Remove after 4 seconds
     setTimeout(function() {
         successEl.remove();
-    }, 3000);
+    }, 4000);
+}
+
+/**
+ * Show Form Error Message
+ */
+function showFormError(form, message) {
+    const errorEl = document.createElement('div');
+    errorEl.className = 'form-error';
+    errorEl.textContent = message;
+    errorEl.style.cssText = `
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #ef4444;
+        color: white;
+        padding: 16px 24px;
+        border-radius: 8px;
+        font-weight: 500;
+        z-index: 10;
+        animation: fadeIn 0.3s ease;
+        text-align: center;
+    `;
+
+    form.style.position = 'relative';
+    form.appendChild(errorEl);
+
+    setTimeout(function() {
+        errorEl.remove();
+    }, 4000);
 }
 
 /**
