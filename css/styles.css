@@ -312,37 +312,18 @@ button {
 .logo a {
     display: flex;
     align-items: center;
-    gap: 12px;
 }
 
-.logo-icon {
-    width: 48px;
-    height: 48px;
-    color: var(--primary);
+.logo-img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
 }
 
-.logo-icon svg {
-    width: 100%;
-    height: 100%;
-}
-
-.logo-text {
-    display: flex;
-    flex-direction: column;
-}
-
-.logo-name {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--secondary);
-    line-height: 1.2;
-}
-
-.logo-tagline {
-    font-size: 0.65rem;
-    font-weight: 600;
-    color: var(--text-light);
-    letter-spacing: 3px;
+.mobile-logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
 }
 
 /* Header Contact */
@@ -470,19 +451,12 @@ button {
 .mobile-logo {
     display: none;
     align-items: center;
-    gap: 8px;
-    color: var(--primary);
 }
 
-.mobile-logo .logo-icon {
-    width: 36px;
-    height: 36px;
-}
-
-.mobile-logo-text {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--secondary);
+.mobile-logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
 }
 
 /* Mobile Menu Button */
@@ -950,6 +924,105 @@ button {
 }
 
 /* ===================================
+   Reviews Section
+   =================================== */
+.reviews {
+    padding: 80px 0;
+    background-color: var(--gray-50);
+}
+
+.reviews-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.reviews-header .section-title {
+    margin-bottom: 8px;
+}
+
+.reviews-header .section-subtitle {
+    color: var(--text-light);
+}
+
+.reviews-swiper {
+    padding: 20px 10px 60px;
+}
+
+.review-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.review-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+}
+
+.review-stars {
+    margin-bottom: 16px;
+    display: flex;
+    gap: 4px;
+}
+
+.review-stars span {
+    color: #fbbf24;
+    font-size: 1.25rem;
+}
+
+.review-text {
+    font-size: 1.05rem;
+    color: var(--text);
+    line-height: 1.7;
+    margin-bottom: 24px;
+    flex-grow: 1;
+    font-style: italic;
+}
+
+.review-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid var(--gray-200);
+}
+
+.review-author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.review-name {
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+.review-company {
+    font-size: 0.875rem;
+    color: var(--text-light);
+}
+
+.reviews-swiper .swiper-pagination {
+    bottom: 0;
+}
+
+.reviews-swiper .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: var(--gray-300);
+    opacity: 1;
+}
+
+.reviews-swiper .swiper-pagination-bullet-active {
+    background: var(--primary);
+}
+
+/* ===================================
    Projects Section
    =================================== */
 .projects {
@@ -1159,6 +1232,14 @@ button {
     align-items: center;
     gap: 12px;
     margin-bottom: 20px;
+}
+
+.footer-logo-img {
+    height: 60px;
+    width: auto;
+    border-radius: 8px;
+    background: var(--white);
+    padding: 4px;
 }
 
 .footer-logo .logo-icon {

@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initMobileMenu();
     initHeroSwiper();
     initWelcomeSwiper();
+    initReviewsSwiper();
     initAOS();
     initSmoothScroll();
     initBackToTop();
@@ -132,6 +133,33 @@ function initWelcomeSwiper() {
         navigation: {
             nextEl: '.welcome-swiper .swiper-button-next',
             prevEl: '.welcome-swiper .swiper-button-prev',
+        },
+    });
+}
+
+/**
+ * Reviews Section Swiper
+ */
+function initReviewsSwiper() {
+    new Swiper('.reviews-swiper', {
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        slidesPerView: 1,
+        spaceBetween: 24,
+        pagination: {
+            el: '.reviews-swiper .swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
         },
     });
 }
