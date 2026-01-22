@@ -5,7 +5,6 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize all components
-    initLoader();
     initHeader();
     initMobileMenu();
     initHeroSwiper();
@@ -15,23 +14,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScroll();
     initBackToTop();
     initContactForm();
-    initNewsletterForm();
     initNavHighlight();
 });
-
-/**
- * Page Loader
- */
-function initLoader() {
-    const loader = document.getElementById('loader');
-
-    window.addEventListener('load', function() {
-        setTimeout(function() {
-            loader.classList.add('hidden');
-            document.body.style.overflow = 'visible';
-        }, 1500);
-    });
-}
 
 /**
  * Header Scroll Effect
@@ -249,33 +233,6 @@ function initContactForm() {
         .catch(function(error) {
             showFormError(form, 'Something went wrong. Please try again.');
         });
-    });
-}
-
-/**
- * Newsletter Form
- */
-function initNewsletterForm() {
-    const form = document.getElementById('newsletterForm');
-
-    if (!form) return;
-
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        const email = form.querySelector('input[type="email"]').value;
-
-        // Open email client with subscription request
-        const subject = encodeURIComponent('Newsletter Subscription Request');
-        const body = encodeURIComponent('Please add this email to your newsletter: ' + email);
-
-        window.location.href = 'mailto:david@serenityins.com?subject=' + subject + '&body=' + body;
-
-        // Clear form
-        form.reset();
-
-        // Show success feedback
-        showFormSuccess(form, 'Thank you for subscribing!');
     });
 }
 
