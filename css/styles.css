@@ -1681,8 +1681,25 @@ button {
     }
 
     .services-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .service-card {
+        padding: 16px 10px;
+    }
+
+    .service-icon {
+        margin-bottom: 8px;
+    }
+
+    .service-icon svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .service-title {
+        font-size: 0.8rem;
     }
 
     .projects-gallery {

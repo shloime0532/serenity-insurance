@@ -97,14 +97,7 @@ function initHeroSwiper() {
             delay: 5000,
             disableOnInteraction: false,
         },
-        pagination: {
-            el: '.hero-swiper .swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.hero-swiper .swiper-button-next',
-            prevEl: '.hero-swiper .swiper-button-prev',
-        },
+        allowTouchMove: false,
         on: {
             slideChange: function() {
                 // Reset animations on slide change
@@ -130,10 +123,7 @@ function initWelcomeSwiper() {
             delay: 4000,
             disableOnInteraction: false,
         },
-        navigation: {
-            nextEl: '.welcome-swiper .swiper-button-next',
-            prevEl: '.welcome-swiper .swiper-button-prev',
-        },
+        allowTouchMove: false,
     });
 }
 
@@ -149,10 +139,7 @@ function initReviewsSwiper() {
         },
         slidesPerView: 1,
         spaceBetween: 24,
-        pagination: {
-            el: '.reviews-swiper .swiper-pagination',
-            clickable: true,
-        },
+        allowTouchMove: false,
         breakpoints: {
             640: {
                 slidesPerView: 2,
