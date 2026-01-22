@@ -763,6 +763,10 @@ button {
     color: var(--white);
 }
 
+.service-card-featured .service-description {
+    color: rgba(255, 255, 255, 0.9);
+}
+
 .service-card-featured .service-link {
     color: var(--white);
 }
@@ -776,7 +780,14 @@ button {
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--secondary);
-    margin-bottom: 16px;
+    margin-bottom: 8px;
+}
+
+.service-description {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    line-height: 1.5;
+    margin: 0;
 }
 
 .service-link {
@@ -1700,6 +1711,11 @@ button {
 
     .service-title {
         font-size: 0.8rem;
+    }
+
+    .service-description {
+        font-size: 0.7rem;
+        line-height: 1.4;
     }
 
     .projects-gallery {
