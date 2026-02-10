@@ -1020,6 +1020,7 @@ button {
 .reviews {
     padding: 80px 0;
     background-color: var(--gray-50);
+    overflow: hidden;
 }
 
 .reviews-header {
@@ -1608,23 +1609,26 @@ button {
     /* Show mobile logo */
     .mobile-logo {
         display: flex;
+        position: relative;
+        z-index: 1001;
     }
 
     .nav-menu {
-        position: absolute;
-        top: 100%;
-        left: -20px;
-        right: -20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
         flex-direction: column;
         gap: 0;
         background-color: var(--white);
-        box-shadow: var(--shadow-lg);
-        padding: 20px;
+        padding: 90px 24px 24px;
         opacity: 0;
         visibility: hidden;
         transform: translateY(-10px);
         transition: var(--transition);
-        z-index: 1000;
+        z-index: 999;
+        overflow-y: auto;
     }
 
     .nav-menu.active {
@@ -1634,9 +1638,10 @@ button {
     }
 
     .nav-link {
-        padding: 14px 0;
+        padding: 18px 0;
         border-bottom: 1px solid var(--gray-200);
-        font-size: 1rem;
+        font-size: 1.1rem;
+        font-weight: 500;
     }
 
     .nav-actions {
@@ -1645,6 +1650,8 @@ button {
 
     .mobile-menu-btn {
         display: flex;
+        position: relative;
+        z-index: 1001;
     }
 
     /* Show mobile CTA in menu */
