@@ -378,18 +378,5 @@
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
-    <script>
-        // Scroll to hash on page load
-        if (window.location.hash) {
-            setTimeout(function() {
-                var target = document.querySelector(window.location.hash);
-                if (target) {
-                    var headerHeight = document.getElementById('header').offsetHeight;
-                    var targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
-                    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-                }
-            }, 300);
-        }
-    </script>
 </body>
 </html>

@@ -72,6 +72,7 @@ function initMobileMenu() {
  * Hero Swiper Carousel
  */
 function initHeroSwiper() {
+    if (typeof Swiper === 'undefined') return;
     new Swiper('.hero-swiper', {
         loop: true,
         effect: 'fade',
@@ -102,6 +103,7 @@ function initHeroSwiper() {
  * Welcome Section Swiper
  */
 function initWelcomeSwiper() {
+    if (typeof Swiper === 'undefined') return;
     new Swiper('.welcome-swiper', {
         loop: true,
         autoplay: {
@@ -116,6 +118,7 @@ function initWelcomeSwiper() {
  * Reviews Section Swiper
  */
 function initReviewsSwiper() {
+    if (typeof Swiper === 'undefined') return;
     new Swiper('.reviews-swiper', {
         loop: true,
         autoplay: {
@@ -494,7 +497,7 @@ function initServiceHashNav() {
 
 // Handle window resize
 window.addEventListener('resize', debounce(function() {
-    AOS.refresh();
+    if (typeof AOS !== 'undefined') AOS.refresh();
 }, 250));
 
 // Console welcome message

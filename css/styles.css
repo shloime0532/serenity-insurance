@@ -1771,21 +1771,42 @@ button {
     }
 
     .services-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 12px;
     }
 
-    .service-card {
-        padding: 16px 20px;
-        text-align: left;
-        display: flex;
-        align-items: center;
-        gap: 16px;
+    /* 2-column checkerboard: R W / W R / R W / W R */
+    .service-card:nth-child(4n+1) {
+        background-color: var(--primary);
+        border-color: var(--primary);
     }
-
-    .service-icon {
-        margin-bottom: 0;
-        flex-shrink: 0;
+    .service-card:nth-child(4n+1) .service-icon,
+    .service-card:nth-child(4n+1) .service-title {
+        color: var(--white);
+    }
+    .service-card:nth-child(4n+2) {
+        background-color: var(--white);
+        border: 2px solid var(--primary);
+    }
+    .service-card:nth-child(4n+2) .service-icon,
+    .service-card:nth-child(4n+2) .service-title {
+        color: var(--primary);
+    }
+    .service-card:nth-child(4n+3) {
+        background-color: var(--white);
+        border: 2px solid var(--primary);
+    }
+    .service-card:nth-child(4n+3) .service-icon,
+    .service-card:nth-child(4n+3) .service-title {
+        color: var(--primary);
+    }
+    .service-card:nth-child(4n+4) {
+        background-color: var(--primary);
+        border-color: var(--primary);
+    }
+    .service-card:nth-child(4n+4) .service-icon,
+    .service-card:nth-child(4n+4) .service-title {
+        color: var(--white);
     }
 
     /* CTA Mobile */
@@ -1949,12 +1970,12 @@ button {
 
     /* Services for small phones */
     .services-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 8px;
     }
 
     .service-card {
-        padding: 14px 16px;
+        padding: 14px 12px;
     }
 
     .service-icon svg {
@@ -1963,7 +1984,7 @@ button {
     }
 
     .service-title {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         margin-bottom: 0;
     }
 
@@ -2510,29 +2531,11 @@ button {
 /* Services page responsive */
 @media (max-width: 768px) {
     .services-nav-section {
-        top: 70px;
-        padding: 10px 0;
-    }
-
-    .services-quick-nav {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        justify-content: flex-start;
-        gap: 8px;
-        padding: 4px 20px;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-    }
-
-    .services-quick-nav::-webkit-scrollbar {
         display: none;
     }
 
-    .services-nav-pill {
-        font-size: 0.75rem;
-        padding: 6px 12px;
-        flex-shrink: 0;
+    .service-block {
+        scroll-margin-top: 90px;
     }
 
     .service-block-content {
@@ -2549,11 +2552,6 @@ button {
 }
 
 @media (max-width: 480px) {
-    .services-nav-pill {
-        font-size: 0.7rem;
-        padding: 5px 10px;
-    }
-
     .service-block-content {
         padding: 20px 16px;
     }
