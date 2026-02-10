@@ -799,10 +799,12 @@ button {
     border-color: transparent;
 }
 
-/* Service Card Color Variations */
+/* Service Card Color Variations — Clean Red & White Checkerboard */
+
+/* Red cards */
 .service-card-red {
-    background: linear-gradient(135deg, #C41E3A 0%, #a01830 100%);
-    border-color: #C41E3A;
+    background-color: var(--primary);
+    border-color: var(--primary);
 }
 
 .service-card-red .service-icon,
@@ -810,63 +812,20 @@ button {
     color: var(--white);
 }
 
-.service-card-blue {
-    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-    border-color: #2563eb;
+/* White cards */
+.service-card-white {
+    background-color: var(--white);
+    border: 2px solid var(--primary);
 }
 
-.service-card-blue .service-icon,
-.service-card-blue .service-title {
-    color: var(--white);
+.service-card-white .service-icon,
+.service-card-white .service-title {
+    color: var(--primary);
 }
 
-.service-card-green {
-    background: linear-gradient(135deg, #059669 0%, #047857 100%);
-    border-color: #059669;
-}
-
-.service-card-green .service-icon,
-.service-card-green .service-title {
-    color: var(--white);
-}
-
-.service-card-purple {
-    background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
-    border-color: #7c3aed;
-}
-
-.service-card-purple .service-icon,
-.service-card-purple .service-title {
-    color: var(--white);
-}
-
-.service-card-orange {
-    background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
-    border-color: #ea580c;
-}
-
-.service-card-orange .service-icon,
-.service-card-orange .service-title {
-    color: var(--white);
-}
-
-.service-card-teal {
-    background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
-    border-color: #0d9488;
-}
-
-.service-card-teal .service-icon,
-.service-card-teal .service-title {
-    color: var(--white);
-}
-
-/* Color card hover effects */
+/* Card hover effects */
 .service-card-red:hover,
-.service-card-blue:hover,
-.service-card-green:hover,
-.service-card-purple:hover,
-.service-card-orange:hover,
-.service-card-teal:hover {
+.service-card-white:hover {
     transform: translateY(-6px);
     box-shadow: var(--shadow-xl);
 }
@@ -1614,6 +1573,10 @@ button {
 
     /* Header Mobile */
     .header-letterhead {
+        display: none;
+    }
+
+    .header-top {
         display: none;
     }
 
@@ -2395,6 +2358,170 @@ button {
 
     .mission-text {
         font-size: 1rem;
+    }
+}
+
+/* ===================================
+   Services Page — Consolidated
+   =================================== */
+.services-nav-section {
+    padding: 24px 0;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--gray-200);
+    position: sticky;
+    top: 70px;
+    z-index: 50;
+}
+
+.services-quick-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.services-nav-pill {
+    display: inline-block;
+    padding: 6px 14px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text);
+    background-color: var(--gray-100);
+    border-radius: 20px;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.services-nav-pill:hover {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.all-services {
+    padding: 60px 0 40px;
+}
+
+.service-block {
+    display: flex;
+    gap: 0;
+    background-color: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 24px;
+    transition: var(--transition);
+    scroll-margin-top: 140px;
+}
+
+.service-block:hover {
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary);
+}
+
+.service-block-accent {
+    width: 6px;
+    min-height: 100%;
+    background-color: var(--primary);
+    flex-shrink: 0;
+}
+
+.service-block-content {
+    padding: 32px 36px;
+    flex: 1;
+}
+
+.service-block-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background-color: rgba(196, 30, 58, 0.1);
+    color: var(--primary);
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.service-block-content h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+
+.service-block-content h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--secondary);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.service-block-content p {
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+/* Services page responsive */
+@media (max-width: 768px) {
+    .services-nav-section {
+        top: 70px;
+        padding: 10px 0;
+    }
+
+    .services-quick-nav {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        gap: 8px;
+        padding: 4px 20px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .services-quick-nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .services-nav-pill {
+        font-size: 0.75rem;
+        padding: 6px 12px;
+        flex-shrink: 0;
+    }
+
+    .service-block-content {
+        padding: 24px 20px;
+    }
+
+    .service-block-content h2 {
+        font-size: 1.25rem;
+    }
+
+    .all-services {
+        padding: 40px 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-nav-pill {
+        font-size: 0.7rem;
+        padding: 5px 10px;
+    }
+
+    .service-block-content {
+        padding: 20px 16px;
+    }
+
+    .service-block-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+    .service-block-icon svg {
+        width: 24px;
+        height: 24px;
     }
 }
 
