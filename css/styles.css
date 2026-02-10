@@ -503,7 +503,7 @@ button {
 }
 
 .mobile-logo-img {
-    height: 50px;
+    height: 65px;
     width: auto;
     object-fit: contain;
 }
@@ -1327,7 +1327,7 @@ button {
 }
 
 .footer-logo-img {
-    height: 60px;
+    height: 80px;
     width: auto;
     border-radius: 8px;
     background: var(--white);
@@ -1771,13 +1771,21 @@ button {
     }
 
     .services-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: 12px;
     }
 
     .service-card {
-        padding: 20px 14px;
-        text-align: center;
+        padding: 16px 20px;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .service-icon {
+        margin-bottom: 0;
+        flex-shrink: 0;
     }
 
     /* CTA Mobile */
@@ -1941,26 +1949,22 @@ button {
 
     /* Services for small phones */
     .services-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: 8px;
     }
 
     .service-card {
-        padding: 14px 10px;
-    }
-
-    .service-icon {
-        margin-bottom: 6px;
+        padding: 14px 16px;
     }
 
     .service-icon svg {
-        width: 26px;
-        height: 26px;
+        width: 28px;
+        height: 28px;
     }
 
     .service-title {
-        font-size: 0.75rem;
-        margin-bottom: 4px;
+        font-size: 0.85rem;
+        margin-bottom: 0;
     }
 
     .service-description {
@@ -2438,6 +2442,23 @@ button {
 
 .service-block:hover {
     box-shadow: var(--shadow-lg);
+    border-color: var(--primary);
+}
+
+/* Highlighted service block (when navigated to via hash) */
+.service-block.highlighted {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.2), var(--shadow-lg);
+}
+
+.service-block.highlighted .service-block-accent {
+    width: 8px;
+}
+
+/* Active nav pill */
+.services-nav-pill.active {
+    background-color: var(--primary);
+    color: var(--white);
     border-color: var(--primary);
 }
 

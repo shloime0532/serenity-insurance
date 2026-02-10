@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initBackToTop();
     initContactForm();
     initNavHighlight();
+    initServiceHashNav();
 });
 
 /**
@@ -411,6 +412,84 @@ function throttle(func, limit) {
             }, limit);
         }
     };
+}
+
+/**
+ * Service Page Hash Navigation
+ * Scrolls to, highlights, and activates the correct nav pill
+ */
+function initServiceHashNav() {
+    var serviceBlocks = document.querySelectorAll('.service-block');
+    var navPills = document.querySelectorAll('.services-nav-pill');
+
+    if (!serviceBlocks.length) return;
+
+    function highlightService(hash) {
+        if (!hash) return;
+
+        var targetId = hash.replace('#', '');
+        var target = document.getElementById(targetId);
+
+        if (!target || !target.classList.contains('service-block')) return;
+
+        // Force AOS animation on target
+        target.classList.add('aos-animate');
+
+        // Remove previous highlights
+        serviceBlocks.forEach(function(block) {
+            block.classList.remove('highlighted');
+        });
+
+        // Add highlight to target
+        target.classList.add('highlighted');
+
+        // Highlight matching nav pill
+        var activePill = null;
+        navPills.forEach(function(pill) {
+            pill.classList.remove('active');
+            if (pill.getAttribute('href') === '#' + targetId) {
+                pill.classList.add('active');
+                activePill = pill;
+            }
+        });
+
+        // Smooth scroll to target
+        setTimeout(function() {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+
+        // Scroll the nav pill into view after page scroll settles
+        if (activePill) {
+            setTimeout(function() {
+                var container = activePill.parentElement;
+                if (container) {
+                    container.scrollLeft = activePill.offsetLeft - (container.offsetWidth / 2) + (activePill.offsetWidth / 2);
+                }
+            }, 600);
+        }
+    }
+
+    // Handle initial hash on page load (delay to let AOS finish)
+    if (window.location.hash) {
+        setTimeout(function() {
+            highlightService(window.location.hash);
+        }, 300);
+    }
+
+    // Handle nav pill clicks
+    navPills.forEach(function(pill) {
+        pill.addEventListener('click', function(e) {
+            e.preventDefault();
+            var hash = this.getAttribute('href');
+            history.pushState(null, null, hash);
+            highlightService(hash);
+        });
+    });
+
+    // Handle hash changes (back/forward)
+    window.addEventListener('hashchange', function() {
+        highlightService(window.location.hash);
+    });
 }
 
 // Handle window resize
