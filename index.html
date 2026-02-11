@@ -17,39 +17,17 @@
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!-- Header -->
     <header class="header" id="header">
-        <div class="header-red-bar"></div>
-        <div class="header-letterhead">
-            <div class="container">
-                <div class="letterhead-content">
-                    <div class="logo">
-                        <a href="#home">
-                            <img src="assets/logo.jpg" alt="Serenity Insurance Brokerage" class="logo-img-large">
-                        </a>
-                    </div>
-                    <div class="header-tagline">
-                        <span class="tagline-text">We Ensure Your Serenity</span>
-                    </div>
-                </div>
-                <div class="header-red-lines">
-                    <div class="red-line"></div>
-                    <div class="red-line"></div>
-                </div>
-            </div>
-        </div>
         <nav class="nav">
             <div class="container">
                 <div class="nav-content">
-                    <a href="#home" class="mobile-logo">
-                        <img src="assets/logo.jpg" alt="Serenity Insurance Brokerage" class="mobile-logo-img">
+                    <a href="#home" class="nav-logo">
+                        <img src="assets/logo.jpg" alt="Serenity Insurance Brokerage" class="nav-logo-img">
                     </a>
                     <ul class="nav-menu" id="navMenu">
                         <li><a href="#home" class="nav-link active">Home</a></li>
@@ -73,46 +51,13 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="swiper hero-swiper">
-            <div class="swiper-wrapper">
-                <!-- Slide 1 - Construction -->
-                <div class="swiper-slide">
-                    <div class="hero-slide" style="background-image: url('assets/workerslooking.png');">
-                        <div class="hero-overlay"></div>
-                        <div class="container">
-                            <div class="hero-content">
-                                <h1 class="hero-title">Reliable Property & Casualty coverage tailored to your industry</h1>
-                                <p class="hero-subtitle">Minimize risks and maintain business continuity with insurance solutions built for companies of all sizes.</p>
-                                <a href="#contact" class="btn btn-primary btn-lg">Contact Us</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide 2 - Real Estate -->
-                <div class="swiper-slide">
-                    <div class="hero-slide" style="background-image: url('assets/coolbuilding.png');">
-                        <div class="hero-overlay"></div>
-                        <div class="container">
-                            <div class="hero-content">
-                                <h1 class="hero-title">Comprehensive protection for your business assets</h1>
-                                <p class="hero-subtitle">From property to liability and operational risks, our insurance solutions are designed to safeguard what matters most.</p>
-                                <a href="#contact" class="btn btn-primary btn-lg">Contact Us</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide 3 - Commercial Buildings -->
-                <div class="swiper-slide">
-                    <div class="hero-slide" style="background-image: url('assets/businessins.png');">
-                        <div class="hero-overlay"></div>
-                        <div class="container">
-                            <div class="hero-content">
-                                <h1 class="hero-title">Flexible insurance options from trusted carriers</h1>
-                                <p class="hero-subtitle">We partner with multiple providers to deliver coverage that aligns with your goals, scale, and operational needs.</p>
-                                <a href="#contact" class="btn btn-primary btn-lg">Contact Us</a>
-                            </div>
-                        </div>
-                    </div>
+        <div class="hero-slide" style="background-image: url('assets/workerslooking.png');">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Reliable Property & Casualty coverage tailored to your industry</h1>
+                    <p class="hero-subtitle">Minimize risks and maintain business continuity with insurance solutions built for companies of all sizes.</p>
+                    <a href="#contact" class="btn btn-primary btn-lg">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -123,25 +68,15 @@
         <div class="container">
             <div class="welcome-grid">
                 <div class="welcome-image" data-aos="fade-right">
-                    <div class="swiper welcome-swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="assets/conferenceroom.png" alt="Business Meeting">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="assets/shield.png" alt="Building Protection">
-                            </div>
-                        </div>
-                    </div>
+                    <img src="assets/conferenceroom.png" alt="Business Meeting">
                 </div>
                 <div class="welcome-content" data-aos="fade-left">
                     <h2 class="section-title">We Protect What Matters Most to You</h2>
                     <div class="welcome-text">
-                        <p>At Serenity Insurance, we provide comprehensive and reliable insurance solutions designed to protect what matters most to you. We understand the importance of safeguarding your assets against unexpected risks and liabilities. With a commitment to excellence and a strong customer-focused approach, we strive to be your trusted partner in navigating the complexities of insurance.</p>
-                        <p>Property and Casualty insurance is a cornerstone of risk management for businesses across many industries. This type of coverage protects against liability claims arising from injuries or property damage, and it also safeguards physical assets such as buildings, equipment, inventory, vehicles, and more.</p>
+                        <p>At Serenity Insurance, we provide comprehensive Property & Casualty insurance solutions designed to protect what matters most to your business. We work closely with each client to deliver tailored coverage that fits their unique needs and risk profile.</p>
                     </div>
                     <a href="about.html" class="btn-link">
-                        View Details
+                        Learn More
                         <span class="btn-link-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m12 16 4-4-4-4"/><path d="M8 12h8"/></svg>
                         </span>
@@ -161,24 +96,30 @@
                 <div class="why-choose-features">
                     <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
                         <div class="feature-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
                         </div>
-                        <h3 class="feature-title">Comprehensive Protection</h3>
-                        <p class="feature-text">A wide range of Property & Casualty insurance products designed to support business continuity and minimize risk.</p>
+                        <div>
+                            <h3 class="feature-title">Comprehensive Protection</h3>
+                            <p class="feature-text">A wide range of P&C insurance products to support business continuity and minimize risk.</p>
+                        </div>
                     </div>
                     <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="feature-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
                         </div>
-                        <h3 class="feature-title">Tailored Coverage</h3>
-                        <p class="feature-text">Everyone's situation is different. We take the time to understand your business, risks, and priorities so you get coverage that protects what matters most.</p>
+                        <div>
+                            <h3 class="feature-title">Tailored Coverage</h3>
+                            <p class="feature-text">We understand your business and deliver coverage that fits your specific risks and priorities.</p>
+                        </div>
                     </div>
                     <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
                         <div class="feature-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                         </div>
-                        <h3 class="feature-title">Dedicated Support</h3>
-                        <p class="feature-text">From consultation and policy selection to servicing, audits, and claims assistance — we're with you every step of the way.</p>
+                        <div>
+                            <h3 class="feature-title">Dedicated Support</h3>
+                            <p class="feature-text">From policy selection to claims assistance — we're with you every step of the way.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -191,201 +132,71 @@
             <div class="section-header" data-aos="fade-up">
                 <h2 class="section-title">Lines of Business We Offer</h2>
             </div>
-            <div class="services-grid">
-                <!-- Row 1: R W R W -->
-                <a href="services.html#general-liability" class="service-card service-card-red" data-aos="fade-up" data-aos-delay="0">
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
-                    </div>
-                    <h3 class="service-title">General Liability</h3>
+            <div class="services-list" data-aos="fade-up" data-aos-delay="100">
+                <a href="services.html#general-liability" class="service-list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+                    <span>General Liability</span>
                 </a>
-                <a href="services.html#property-coverage" class="service-card service-card-white" data-aos="fade-up" data-aos-delay="50">
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
-                    </div>
-                    <h3 class="service-title">Property Coverage</h3>
+                <a href="services.html#property-coverage" class="service-list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+                    <span>Property Coverage</span>
                 </a>
-                <a href="services.html#workers-compensation" class="service-card service-card-red" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="M9 16h6"/><path d="M12 13v6"/></svg>
-                    </div>
-                    <h3 class="service-title">Workers Compensation</h3>
+                <a href="services.html#workers-compensation" class="service-list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="M9 16h6"/><path d="M12 13v6"/></svg>
+                    <span>Workers Compensation</span>
                 </a>
-                <a href="services.html#disability" class="service-card service-card-white" data-aos="fade-up" data-aos-delay="150">
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M10 22v-5l-1-1v-4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v4l-1 1v5"/><path d="M20 10.5c0 1.5-2 3.5-2 3.5H6s-2-2-2-3.5c0-1 .5-1.5 1-1.5h14c.5 0 1 .5 1 1.5Z"/></svg>
-                    </div>
-                    <h3 class="service-title">Disability & Paid Family Leave</h3>
+                <a href="services.html#disability" class="service-list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M10 22v-5l-1-1v-4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v4l-1 1v5"/></svg>
+                    <span>Disability & Paid Family Leave</span>
                 </a>
-                <!-- Row 2: W R W R (checkerboard flip) -->
-                <a href="services.html#umbrella-coverage" class="service-card service-card-white" data-aos="fade-up" data-aos-delay="0">
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12a10.06 10.06 0 0 0-20 0Z"/><path d="M12 12v8a2 2 0 0 0 4 0"/><path d="M12 2v1"/></svg>
-                    </div>
-                    <h3 class="service-title">Umbrella Coverage</h3>
+                <a href="services.html#umbrella-coverage" class="service-list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12a10.06 10.06 0 0 0-20 0Z"/><path d="M12 12v8a2 2 0 0 0 4 0"/><path d="M12 2v1"/></svg>
+                    <span>Umbrella / Excess</span>
                 </a>
-                <a href="services.html#builders-risk" class="service-card service-card-red" data-aos="fade-up" data-aos-delay="50">
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>
-                    </div>
-                    <h3 class="service-title">Builders Risk</h3>
+                <a href="services.html#builders-risk" class="service-list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>
+                    <span>Builders Risk</span>
                 </a>
-                <a href="services.html#inland-marine" class="service-card service-card-white" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1 .6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"/><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"/><path d="M12 10v4"/><path d="M12 2v3"/></svg>
-                    </div>
-                    <h3 class="service-title">Inland Marine</h3>
+                <a href="services.html#inland-marine" class="service-list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1 .6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"/><path d="M12 10v4"/><path d="M12 2v3"/></svg>
+                    <span>Inland Marine</span>
                 </a>
-                <a href="services.html#contractors-equipment" class="service-card service-card-red" data-aos="fade-up" data-aos-delay="150">
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m2 22 1-1h3l9-9"/><path d="M3 21v-3l9-9"/><path d="m15 6 3.4-3.4a2.1 2.1 0 1 1 3 3L18 9l.4.4a2.1 2.1 0 1 1-3 3l-3.8-3.8a2.1 2.1 0 1 1 3-3l.4.4Z"/></svg>
-                    </div>
-                    <h3 class="service-title">Contractors Equipment</h3>
+                <a href="services.html#contractors-equipment" class="service-list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m2 22 1-1h3l9-9"/><path d="M3 21v-3l9-9"/></svg>
+                    <span>Contractors Equipment</span>
                 </a>
-                <!-- Row 3: R W R W -->
-                <a href="services.html#directors-officers" class="service-card service-card-red" data-aos="fade-up" data-aos-delay="0">
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20a6 6 0 0 0-12 0"/><circle cx="12" cy="10" r="4"/><circle cx="12" cy="12" r="10"/></svg>
-                    </div>
-                    <h3 class="service-title">Directors & Officers</h3>
+                <a href="services.html#directors-officers" class="service-list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20a6 6 0 0 0-12 0"/><circle cx="12" cy="10" r="4"/><circle cx="12" cy="12" r="10"/></svg>
+                    <span>Directors & Officers</span>
                 </a>
-                <a href="services.html#professional-liability" class="service-card service-card-white" data-aos="fade-up" data-aos-delay="50">
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
-                    </div>
-                    <h3 class="service-title">Professional Liability</h3>
+                <a href="services.html#professional-liability" class="service-list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
+                    <span>Professional Liability</span>
                 </a>
-                <a href="services.html#product-liability" class="service-card service-card-red" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
-                    </div>
-                    <h3 class="service-title">Product Liability</h3>
+                <a href="services.html#product-liability" class="service-list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+                    <span>Product Liability</span>
                 </a>
-                <a href="services.html#epli" class="service-card service-card-white" data-aos="fade-up" data-aos-delay="150">
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                    </div>
-                    <h3 class="service-title">EPLI</h3>
+                <a href="services.html#epli" class="service-list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    <span>EPLI</span>
                 </a>
-                <!-- Row 4: W R W R (checkerboard flip) -->
-                <a href="services.html#commercial-auto" class="service-card service-card-white" data-aos="fade-up" data-aos-delay="0">
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
-                    </div>
-                    <h3 class="service-title">Commercial Auto</h3>
+                <a href="services.html#commercial-auto" class="service-list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+                    <span>Commercial Auto</span>
                 </a>
-                <a href="services.html#crime" class="service-card service-card-red" data-aos="fade-up" data-aos-delay="50">
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                    </div>
-                    <h3 class="service-title">Crime</h3>
+                <a href="services.html#crime" class="service-list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    <span>Crime</span>
                 </a>
-                <a href="services.html#bonds" class="service-card service-card-white" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-                    </div>
-                    <h3 class="service-title">Bonds</h3>
+                <a href="services.html#bonds" class="service-list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    <span>Bonds</span>
                 </a>
-                <a href="services.html#pollution-coverage" class="service-card service-card-red" data-aos="fade-up" data-aos-delay="150">
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/><path d="M12.56 14.69c1.1 0 2-.83 2-1.94 0-.56-.29-1.09-.87-1.53s-1-.78-1.13-1.22c-.13.44-.55.78-1.13 1.22s-.87.97-.87 1.53c0 1.11.9 1.94 2 1.94z"/><path d="M17 18.5c1.65 0 3-1.38 3-3.08 0-.87-.42-1.7-1.29-2.4-.87-.7-1.43-1.17-1.71-1.89-.28.72-.84 1.19-1.71 1.89-.87.7-1.29 1.53-1.29 2.4 0 1.7 1.35 3.08 3 3.08z"/></svg>
-                    </div>
-                    <h3 class="service-title">Pollution Coverage</h3>
+                <a href="services.html#pollution-coverage" class="service-list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/></svg>
+                    <span>Pollution Coverage</span>
                 </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Banner -->
-    <section class="cta-banner">
-        <div class="cta-bg"></div>
-        <div class="container">
-            <div class="cta-content" data-aos="fade-up">
-                <h2 class="cta-title">Feel Protected. Feel Serenity.</h2>
-            </div>
-        </div>
-    </section>
-
-    <!-- Client Reviews Section -->
-    <section class="reviews section" id="reviews">
-        <div class="container">
-            <div class="reviews-header" data-aos="fade-up">
-                <h2 class="section-title text-primary">What Our Clients Say</h2>
-                <p class="section-subtitle">Real feedback from businesses we've helped protect.</p>
-            </div>
-            <div class="swiper reviews-swiper" data-aos="fade-up" data-aos-delay="100">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="review-card">
-                            <div class="review-stars">
-                                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
-                            </div>
-                            <p class="review-text">"Serenity Insurance made the entire process seamless. They found us the perfect coverage at a competitive rate. Highly recommend their team!"</p>
-                            <div class="review-author">
-                                <div class="review-author-info">
-                                    <span class="review-name">Michael R.</span>
-                                    <span class="review-company">Construction Company Owner</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="review-card">
-                            <div class="review-stars">
-                                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
-                            </div>
-                            <p class="review-text">"Outstanding service and expertise. They took the time to understand our unique needs and delivered comprehensive coverage that gives us peace of mind."</p>
-                            <div class="review-author">
-                                <div class="review-author-info">
-                                    <span class="review-name">Sarah L.</span>
-                                    <span class="review-company">Real Estate Developer</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="review-card">
-                            <div class="review-stars">
-                                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
-                            </div>
-                            <p class="review-text">"Professional, responsive, and truly knowledgeable. Serenity Insurance has been our trusted partner for years. They always go above and beyond."</p>
-                            <div class="review-author">
-                                <div class="review-author-info">
-                                    <span class="review-name">David K.</span>
-                                    <span class="review-company">Property Management Firm</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="review-card">
-                            <div class="review-stars">
-                                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
-                            </div>
-                            <p class="review-text">"When we had a claim, they handled everything efficiently and kept us informed every step of the way. That's when you really see the value of a great broker."</p>
-                            <div class="review-author">
-                                <div class="review-author-info">
-                                    <span class="review-name">Jennifer M.</span>
-                                    <span class="review-company">Manufacturing Business</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="review-card">
-                            <div class="review-stars">
-                                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
-                            </div>
-                            <p class="review-text">"Switching to Serenity was one of the best business decisions we made. Better coverage, better rates, and a team that actually cares about our success."</p>
-                            <div class="review-author">
-                                <div class="review-author-info">
-                                    <span class="review-name">Robert T.</span>
-                                    <span class="review-company">Retail Business Owner</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -419,9 +230,7 @@
                     </div>
                 </div>
                 <div class="contact-form-wrapper" data-aos="fade-left">
-                    <form class="contact-form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                        <input type="hidden" name="form-name" value="contact">
-                        <input type="hidden" name="bot-field">
+                    <form class="contact-form" id="contactForm" name="contact" method="POST" action="https://formspree.io/f/xwpkvqbd">
                         <div class="form-group">
                             <input type="text" id="name" name="name" placeholder="Your Name" required>
                         </div>
@@ -455,31 +264,21 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <img src="assets/logo.jpg" alt="Serenity Insurance Brokerage" class="footer-logo-img">
-                    </div>
-                    <p class="footer-description">P&C Brokerage Group Inc - DBA Serenity Insurance Brokerage. Your trusted partner for comprehensive insurance solutions.</p>
-                    <div class="footer-contact">
-                        <div class="footer-contact-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                            <span>Phone: 646-992-4399</span>
-                        </div>
-                        <div class="footer-contact-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                            <span>servicing@serenityins.com</span>
-                        </div>
-                    </div>
+            <div class="footer-minimal">
+                <div class="footer-brand-minimal">
+                    <img src="assets/logo.jpg" alt="Serenity Insurance Brokerage" class="footer-logo-img">
+                    <span class="footer-company-name">Serenity Insurance Brokerage</span>
                 </div>
-                <div class="footer-links">
-                    <h4 class="footer-title">Useful Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
-                    </ul>
+                <div class="footer-contact-minimal">
+                    <a href="tel:+16469924399">646-992-4399</a>
+                    <span class="footer-divider">|</span>
+                    <a href="mailto:servicing@serenityins.com">servicing@serenityins.com</a>
+                </div>
+                <div class="footer-links-minimal">
+                    <a href="#home">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="#contact">Contact</a>
                 </div>
             </div>
         </div>
@@ -498,7 +297,6 @@
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

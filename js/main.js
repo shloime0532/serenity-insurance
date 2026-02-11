@@ -7,9 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize all components
     initHeader();
     initMobileMenu();
-    initHeroSwiper();
-    initWelcomeSwiper();
-    initReviewsSwiper();
     initAOS();
     initSmoothScroll();
     initBackToTop();
@@ -68,76 +65,6 @@ function initMobileMenu() {
     });
 }
 
-/**
- * Hero Swiper Carousel
- */
-function initHeroSwiper() {
-    if (typeof Swiper === 'undefined') return;
-    new Swiper('.hero-swiper', {
-        loop: true,
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true
-        },
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        },
-        allowTouchMove: false,
-        on: {
-            slideChange: function() {
-                // Reset animations on slide change
-                const activeSlide = this.slides[this.activeIndex];
-                const content = activeSlide.querySelector('.hero-content');
-                if (content) {
-                    content.style.animation = 'none';
-                    content.offsetHeight; // Trigger reflow
-                    content.style.animation = null;
-                }
-            }
-        }
-    });
-}
-
-/**
- * Welcome Section Swiper
- */
-function initWelcomeSwiper() {
-    if (typeof Swiper === 'undefined') return;
-    new Swiper('.welcome-swiper', {
-        loop: true,
-        autoplay: {
-            delay: 4000,
-            disableOnInteraction: false,
-        },
-        allowTouchMove: false,
-    });
-}
-
-/**
- * Reviews Section Swiper
- */
-function initReviewsSwiper() {
-    if (typeof Swiper === 'undefined') return;
-    new Swiper('.reviews-swiper', {
-        loop: true,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        },
-        slidesPerView: 1,
-        spaceBetween: 24,
-        allowTouchMove: false,
-        breakpoints: {
-            640: {
-                slidesPerView: 2,
-            },
-            1024: {
-                slidesPerView: 3,
-            },
-        },
-    });
-}
 
 /**
  * AOS (Animate On Scroll) Initialization
@@ -207,7 +134,7 @@ function initBackToTop() {
 }
 
 /**
- * Contact Form (Netlify Forms)
+ * Contact Form (Formspree)
  */
 function initContactForm() {
     const form = document.getElementById('contactForm');
@@ -217,14 +144,13 @@ function initContactForm() {
     form.addEventListener('submit', function(e) {
         e.preventDefault();
 
-        // Get form data
         const formData = new FormData(form);
+        const action = form.getAttribute('action');
 
-        // Submit to Netlify
-        fetch('/', {
+        fetch(action, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: new URLSearchParams(formData).toString()
+            body: formData,
+            headers: { 'Accept': 'application/json' }
         })
         .then(function(response) {
             if (response.ok) {
@@ -234,7 +160,7 @@ function initContactForm() {
                 showFormError(form, 'Something went wrong. Please try again.');
             }
         })
-        .catch(function(error) {
+        .catch(function() {
             showFormError(form, 'Something went wrong. Please try again.');
         });
     });
@@ -344,46 +270,6 @@ function initNavHighlight() {
 
     window.addEventListener('scroll', highlightNav);
     highlightNav(); // Initial check
-}
-
-/**
- * Intersection Observer for lazy animations
- */
-function initLazyAnimations() {
-    const animatedElements = document.querySelectorAll('.animate-on-scroll');
-
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animated');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    });
-
-    animatedElements.forEach(function(el) {
-        observer.observe(el);
-    });
-}
-
-/**
- * Parallax Effect (Subtle)
- */
-function initParallax() {
-    const parallaxElements = document.querySelectorAll('[data-parallax]');
-
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-
-        parallaxElements.forEach(function(el) {
-            const speed = el.dataset.parallax || 0.5;
-            const yPos = -(scrolled * speed);
-            el.style.transform = 'translateY(' + yPos + 'px)';
-        });
-    });
 }
 
 /**
