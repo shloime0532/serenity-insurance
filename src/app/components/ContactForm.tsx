@@ -66,12 +66,12 @@ export default function ContactForm() {
       />
       <select name="service" className={inputClass}>
         <option value="">Select a Service</option>
-        <option value="general-liability">General Liability</option>
-        <option value="professional-liability">Professional Liability</option>
-        <option value="property-insurance">Property Insurance</option>
-        <option value="workers-comp">Workers Compensation</option>
-        <option value="commercial-auto">Commercial Auto</option>
-        <option value="other">Other</option>
+        <option value="General Liability">General Liability</option>
+        <option value="Professional Liability">Professional Liability</option>
+        <option value="Property Insurance">Property Insurance</option>
+        <option value="Workers Compensation">Workers Compensation</option>
+        <option value="Commercial Auto">Commercial Auto</option>
+        <option value="Other">Other</option>
       </select>
       <textarea
         name="message"

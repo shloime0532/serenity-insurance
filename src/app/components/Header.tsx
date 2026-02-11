@@ -97,7 +97,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-300 bg-white ${
+        className={`md:hidden absolute left-0 right-0 top-[70px] bg-white shadow-lg transition-all duration-300 overflow-hidden ${
           menuOpen ? "max-h-80 border-t border-gray-100" : "max-h-0"
         }`}
       >
