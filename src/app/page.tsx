@@ -116,7 +116,7 @@ export default function HomePage() {
                   icon: <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>,
                 },
               ].map((item) => (
-                <div key={item.title} className="flex gap-4 p-5 bg-white rounded-xl shadow-sm">
+                <div key={item.title} className="flex gap-4 p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div className="shrink-0 w-12 h-12 flex items-center justify-center bg-red-50 text-primary rounded-lg">
                     {item.icon}
                   </div>
@@ -137,17 +137,18 @@ export default function HomePage() {
           <h2 className="text-2xl md:text-3xl font-bold text-secondary mb-8 text-center">
             Lines of Business We Offer
           </h2>
-          <div className="grid sm:grid-cols-2 gap-2">
+          <div className="grid sm:grid-cols-2 gap-x-8 gap-y-0">
             {serviceItems.map(({ id, label, Icon }) => (
               <Link
                 key={id}
                 href={`/services#${id}`}
-                className="flex items-center gap-3 px-4 py-3 rounded-lg text-text hover:bg-gray-50 hover:text-primary transition-colors group"
+                className="flex items-center gap-3 px-4 py-3.5 border-b border-gray-100 text-text hover:bg-gray-50 hover:text-primary transition-colors group"
               >
                 <span className="shrink-0 w-8 h-8 flex items-center justify-center text-text-light group-hover:text-primary transition-colors">
                   <Icon />
                 </span>
                 <span className="text-sm font-medium">{label}</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-auto opacity-0 -translate-x-1 group-hover:opacity-50 group-hover:translate-x-0 transition-all"><path d="m9 18 6-6-6-6"/></svg>
               </Link>
             ))}
           </div>
@@ -187,7 +188,9 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <ContactForm />
+            <div className="bg-white rounded-xl shadow-sm p-6 md:p-8">
+              <ContactForm />
+            </div>
           </div>
         </div>
       </section>

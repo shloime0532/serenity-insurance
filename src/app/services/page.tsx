@@ -27,8 +27,8 @@ export default function ServicesPage() {
         <div className="container flex flex-col gap-12">
           {/* 1. General Liability */}
           <div id="general-liability" className="scroll-mt-36">
-            <div className="flex border-l-4 border-primary bg-white rounded-lg shadow-sm p-6 md:p-8">
-              <div className="flex-shrink-0 mr-5 text-primary">
+            <div className="md:flex border-l-4 border-primary bg-white rounded-lg shadow-sm p-6 md:p-8">
+              <div className="flex-shrink-0 mb-3 md:mb-0 md:mr-5 text-primary">
                 <svg
                   width="32"
                   height="32"
@@ -67,8 +67,8 @@ export default function ServicesPage() {
 
           {/* 2. Property Coverage */}
           <div id="property-coverage" className="scroll-mt-36">
-            <div className="flex border-l-4 border-primary bg-white rounded-lg shadow-sm p-6 md:p-8">
-              <div className="flex-shrink-0 mr-5 text-primary">
+            <div className="md:flex border-l-4 border-primary bg-white rounded-lg shadow-sm p-6 md:p-8">
+              <div className="flex-shrink-0 mb-3 md:mb-0 md:mr-5 text-primary">
                 <svg
                   width="32"
                   height="32"
@@ -113,8 +113,8 @@ export default function ServicesPage() {
 
           {/* 3. Workers' Compensation */}
           <div id="workers-compensation" className="scroll-mt-36">
-            <div className="flex border-l-4 border-primary bg-white rounded-lg shadow-sm p-6 md:p-8">
-              <div className="flex-shrink-0 mr-5 text-primary">
+            <div className="md:flex border-l-4 border-primary bg-white rounded-lg shadow-sm p-6 md:p-8">
+              <div className="flex-shrink-0 mb-3 md:mb-0 md:mr-5 text-primary">
                 <svg
                   width="32"
                   height="32"
@@ -157,8 +157,8 @@ export default function ServicesPage() {
 
           {/* 4. Disability & Paid Family Leave */}
           <div id="disability" className="scroll-mt-36">
-            <div className="flex border-l-4 border-primary bg-white rounded-lg shadow-sm p-6 md:p-8">
-              <div className="flex-shrink-0 mr-5 text-primary">
+            <div className="md:flex border-l-4 border-primary bg-white rounded-lg shadow-sm p-6 md:p-8">
+              <div className="flex-shrink-0 mb-3 md:mb-0 md:mr-5 text-primary">
                 <svg
                   width="32"
                   height="32"
@@ -197,8 +197,8 @@ export default function ServicesPage() {
 
           {/* 5. Umbrella / Excess Liability */}
           <div id="umbrella-coverage" className="scroll-mt-36">
-            <div className="flex border-l-4 border-primary bg-white rounded-lg shadow-sm p-6 md:p-8">
-              <div className="flex-shrink-0 mr-5 text-primary">
+            <div className="md:flex border-l-4 border-primary bg-white rounded-lg shadow-sm p-6 md:p-8">
+              <div className="flex-shrink-0 mb-3 md:mb-0 md:mr-5 text-primary">
                 <svg
                   width="32"
                   height="32"
@@ -238,8 +238,8 @@ export default function ServicesPage() {
 
           {/* 6. Builders Risk */}
           <div id="builders-risk" className="scroll-mt-36">
-            <div className="flex border-l-4 border-primary bg-white rounded-lg shadow-sm p-6 md:p-8">
-              <div className="flex-shrink-0 mr-5 text-primary">
+            <div className="md:flex border-l-4 border-primary bg-white rounded-lg shadow-sm p-6 md:p-8">
+              <div className="flex-shrink-0 mb-3 md:mb-0 md:mr-5 text-primary">
                 <svg
                   width="32"
                   height="32"
@@ -294,8 +294,8 @@ export default function ServicesPage() {
 
           {/* 7. Inland Marine */}
           <div id="inland-marine" className="scroll-mt-36">
-            <div className="flex border-l-4 border-primary bg-white rounded-lg shadow-sm p-6 md:p-8">
-              <div className="flex-shrink-0 mr-5 text-primary">
+            <div className="md:flex border-l-4 border-primary bg-white rounded-lg shadow-sm p-6 md:p-8">
+              <div className="flex-shrink-0 mb-3 md:mb-0 md:mr-5 text-primary">
                 <svg
                   width="32"
                   height="32"
@@ -336,8 +336,8 @@ export default function ServicesPage() {
 
           {/* 8. Contractors Equipment */}
           <div id="contractors-equipment" className="scroll-mt-36">
-            <div className="flex border-l-4 border-primary bg-white rounded-lg shadow-sm p-6 md:p-8">
-              <div className="flex-shrink-0 mr-5 text-primary">
+            <div className="md:flex border-l-4 border-primary bg-white rounded-lg shadow-sm p-6 md:p-8">
+              <div className="flex-shrink-0 mb-3 md:mb-0 md:mr-5 text-primary">
                 <svg
                   width="32"
                   height="32"
@@ -376,8 +376,8 @@ export default function ServicesPage() {
 
           {/* 9. Directors & Officers Liability (D&O) */}
           <div id="directors-officers" className="scroll-mt-36">
-            <div className="flex border-l-4 border-primary bg-white rounded-lg shadow-sm p-6 md:p-8">
-              <div className="flex-shrink-0 mr-5 text-primary">
+            <div className="md:flex border-l-4 border-primary bg-white rounded-lg shadow-sm p-6 md:p-8">
+              <div className="flex-shrink-0 mb-3 md:mb-0 md:mr-5 text-primary">
                 <svg
                   width="32"
                   height="32"
@@ -417,8 +417,8 @@ export default function ServicesPage() {
 
           {/* 10. Professional Liability */}
           <div id="professional-liability" className="scroll-mt-36">
-            <div className="flex border-l-4 border-primary bg-white rounded-lg shadow-sm p-6 md:p-8">
-              <div className="flex-shrink-0 mr-5 text-primary">
+            <div className="md:flex border-l-4 border-primary bg-white rounded-lg shadow-sm p-6 md:p-8">
+              <div className="flex-shrink-0 mb-3 md:mb-0 md:mr-5 text-primary">
                 <svg
                   width="32"
                   height="32"
@@ -456,8 +456,8 @@ export default function ServicesPage() {
 
           {/* 11. Product Liability */}
           <div id="product-liability" className="scroll-mt-36">
-            <div className="flex border-l-4 border-primary bg-white rounded-lg shadow-sm p-6 md:p-8">
-              <div className="flex-shrink-0 mr-5 text-primary">
+            <div className="md:flex border-l-4 border-primary bg-white rounded-lg shadow-sm p-6 md:p-8">
+              <div className="flex-shrink-0 mb-3 md:mb-0 md:mr-5 text-primary">
                 <svg
                   width="32"
                   height="32"
@@ -498,8 +498,8 @@ export default function ServicesPage() {
 
           {/* 12. EPLI */}
           <div id="epli" className="scroll-mt-36">
-            <div className="flex border-l-4 border-primary bg-white rounded-lg shadow-sm p-6 md:p-8">
-              <div className="flex-shrink-0 mr-5 text-primary">
+            <div className="md:flex border-l-4 border-primary bg-white rounded-lg shadow-sm p-6 md:p-8">
+              <div className="flex-shrink-0 mb-3 md:mb-0 md:mr-5 text-primary">
                 <svg
                   width="32"
                   height="32"
@@ -540,8 +540,8 @@ export default function ServicesPage() {
 
           {/* 13. Commercial Auto */}
           <div id="commercial-auto" className="scroll-mt-36">
-            <div className="flex border-l-4 border-primary bg-white rounded-lg shadow-sm p-6 md:p-8">
-              <div className="flex-shrink-0 mr-5 text-primary">
+            <div className="md:flex border-l-4 border-primary bg-white rounded-lg shadow-sm p-6 md:p-8">
+              <div className="flex-shrink-0 mb-3 md:mb-0 md:mr-5 text-primary">
                 <svg
                   width="32"
                   height="32"
@@ -582,8 +582,8 @@ export default function ServicesPage() {
 
           {/* 14. Crime */}
           <div id="crime" className="scroll-mt-36">
-            <div className="flex border-l-4 border-primary bg-white rounded-lg shadow-sm p-6 md:p-8">
-              <div className="flex-shrink-0 mr-5 text-primary">
+            <div className="md:flex border-l-4 border-primary bg-white rounded-lg shadow-sm p-6 md:p-8">
+              <div className="flex-shrink-0 mb-3 md:mb-0 md:mr-5 text-primary">
                 <svg
                   width="32"
                   height="32"
@@ -629,8 +629,8 @@ export default function ServicesPage() {
 
           {/* 15. Bonds */}
           <div id="bonds" className="scroll-mt-36">
-            <div className="flex border-l-4 border-primary bg-white rounded-lg shadow-sm p-6 md:p-8">
-              <div className="flex-shrink-0 mr-5 text-primary">
+            <div className="md:flex border-l-4 border-primary bg-white rounded-lg shadow-sm p-6 md:p-8">
+              <div className="flex-shrink-0 mb-3 md:mb-0 md:mr-5 text-primary">
                 <svg
                   width="32"
                   height="32"
@@ -674,8 +674,8 @@ export default function ServicesPage() {
 
           {/* 16. Pollution Coverage */}
           <div id="pollution-coverage" className="scroll-mt-36">
-            <div className="flex border-l-4 border-primary bg-white rounded-lg shadow-sm p-6 md:p-8">
-              <div className="flex-shrink-0 mr-5 text-primary">
+            <div className="md:flex border-l-4 border-primary bg-white rounded-lg shadow-sm p-6 md:p-8">
+              <div className="flex-shrink-0 mb-3 md:mb-0 md:mr-5 text-primary">
                 <svg
                   width="32"
                   height="32"

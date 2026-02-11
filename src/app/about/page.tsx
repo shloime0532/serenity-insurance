@@ -88,7 +88,7 @@ export default function AboutPage() {
             ].map((item) => (
               <div
                 key={item.title}
-                className="bg-white rounded-xl p-8 shadow-sm text-center"
+                className="bg-white rounded-xl p-8 shadow-sm text-center flex flex-col items-center"
               >
                 <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-red-50 text-primary rounded-xl">
                   {item.icon}
