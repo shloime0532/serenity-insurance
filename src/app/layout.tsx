@@ -12,15 +12,26 @@ const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700", "800"],
 });
 
+const siteUrl = "https://serenity-insurance.vercel.app";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Serenity Insurance Brokerage | Property & Casualty Insurance",
     template: "%s | Serenity Insurance Brokerage",
   },
   description:
     "Serenity Insurance Brokerage - Reliable Property & Casualty coverage tailored to your industry. Comprehensive insurance solutions for businesses of all sizes.",
-  icons: {
-    icon: "/assets/logo.jpg",
+  openGraph: {
+    type: "website",
+    siteName: "Serenity Insurance Brokerage",
+    title: "Serenity Insurance Brokerage | Property & Casualty Insurance",
+    description:
+      "Reliable Property & Casualty coverage tailored to your industry. Comprehensive insurance solutions for businesses of all sizes.",
+    url: siteUrl,
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 };
 
