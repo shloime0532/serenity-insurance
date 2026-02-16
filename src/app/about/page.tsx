@@ -11,7 +11,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Page Hero */}
-      <section className="bg-gradient-to-r from-primary to-primary-dark text-white py-16 pt-[calc(70px+4rem)]">
+      <section className="bg-gradient-to-r from-primary to-primary-dark text-white py-16 pt-[calc(70px+4rem)] md:pt-[calc(85px+4rem)]">
         <div className="container text-center">
           <h1 className="text-3xl md:text-4xl font-bold mb-2">
             About Serenity Insurance

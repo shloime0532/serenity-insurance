@@ -37,7 +37,7 @@ export default function HomePage() {
         style={{ backgroundImage: "url('/assets/workerslooking.png')" }}
       >
         <div className="absolute inset-0 bg-black/50" />
-        <div className="container relative z-10 py-24 pt-[calc(70px+6rem)]">
+        <div className="container relative z-10 py-24 pt-[calc(70px+6rem)] md:pt-[calc(85px+6rem)]">
           <div className="max-w-2xl text-white">
             <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-4">
               Reliable Property &amp; Casualty coverage tailored to your industry

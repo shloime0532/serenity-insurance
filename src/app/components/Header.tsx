@@ -35,14 +35,14 @@ export default function Header() {
         scrolled ? "shadow-md" : ""
       }`}
     >
-      <nav className="container flex items-center justify-between h-[70px]">
+      <nav className="container flex items-center justify-between h-[70px] md:h-[85px]">
         <Link href="/" className="shrink-0">
           <Image
             src="/assets/logo.jpg"
             alt="Serenity Insurance Brokerage"
-            width={120}
-            height={50}
-            className="h-[50px] w-auto md:h-[55px]"
+            width={180}
+            height={75}
+            className="h-[55px] w-auto md:h-[70px]"
             priority
           />
         </Link>

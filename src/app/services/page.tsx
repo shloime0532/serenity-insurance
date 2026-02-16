@@ -9,7 +9,7 @@ export default function ServicesPage() {
   return (
     <>
       {/* Page Hero */}
-      <section className="bg-gradient-to-r from-primary to-primary-dark text-white py-16 pt-[calc(70px+4rem)]">
+      <section className="bg-gradient-to-r from-primary to-primary-dark text-white py-16 pt-[calc(70px+4rem)] md:pt-[calc(85px+4rem)]">
         <div className="container">
           <h1 className="text-3xl md:text-4xl font-bold mb-4">Our Services</h1>
           <p className="text-lg md:text-xl opacity-90 max-w-2xl">
