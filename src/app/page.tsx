@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import ContactForm from "./components/ContactForm";
+import TestimonialsCarousel from "./components/TestimonialsCarousel";
 import {
   Shield, Home as HomeIcon, Calendar, User, Umbrella, Building,
   Ship, Wrench, UserCircle, Briefcase, Box, Users,
@@ -131,29 +132,49 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Services List */}
+      {/* Services — Checkerboard Cards */}
       <section id="services" className="py-20">
         <div className="container">
-          <h2 className="text-2xl md:text-3xl font-bold text-secondary mb-8 text-center">
-            Lines of Business We Offer
-          </h2>
-          <div className="grid sm:grid-cols-2 gap-x-8 gap-y-0">
-            {serviceItems.map(({ id, label, Icon }) => (
-              <Link
-                key={id}
-                href={`/services#${id}`}
-                className="flex items-center gap-3 px-4 py-3.5 border-b border-gray-100 text-text hover:bg-gray-50 hover:text-primary transition-colors group"
-              >
-                <span className="shrink-0 w-8 h-8 flex items-center justify-center text-text-light group-hover:text-primary transition-colors">
-                  <Icon />
-                </span>
-                <span className="text-sm font-medium">{label}</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-auto opacity-0 -translate-x-1 group-hover:opacity-50 group-hover:translate-x-0 transition-all"><path d="m9 18 6-6-6-6"/></svg>
-              </Link>
-            ))}
+          <div className="text-center mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-secondary">
+              Lines of Business We Offer
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 md:gap-3">
+            {serviceItems.map(({ id, label, Icon }, i) => {
+              const row = Math.floor(i / 4);
+              const col = i % 4;
+              const isRed = (row + col) % 2 === 0;
+
+              return (
+                <Link
+                  key={id}
+                  href={`/services#${id}`}
+                  className={`group relative flex flex-col items-center justify-center gap-2.5 md:gap-3 rounded-xl p-4 md:p-6 text-center transition-all duration-200 hover:scale-[1.03] hover:shadow-lg ${
+                    isRed
+                      ? "bg-primary text-white shadow-md shadow-primary/20"
+                      : "bg-white text-secondary border border-gray-200 shadow-sm"
+                  }`}
+                >
+                  <span
+                    className={`w-9 h-9 md:w-10 md:h-10 flex items-center justify-center transition-transform duration-200 group-hover:scale-110 ${
+                      isRed ? "text-white/90" : "text-primary"
+                    }`}
+                  >
+                    <Icon />
+                  </span>
+                  <span className="text-xs md:text-sm font-semibold leading-tight">
+                    {label}
+                  </span>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
+
+      {/* Testimonials */}
+      <TestimonialsCarousel />
 
       {/* Contact */}
       <section id="contact" className="py-20 bg-gray-50">
