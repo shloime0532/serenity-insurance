@@ -140,38 +140,58 @@ export default function HomePage() {
               Lines of Business We Offer
             </h2>
           </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 md:gap-3">
+          {/* Mobile: 2-col checkerboard */}
+          <div className="grid grid-cols-2 gap-2.5 lg:hidden">
             {serviceItems.map(({ id, label, shortLabel, Icon }, i) => {
-              const row = Math.floor(i / 4);
-              const col = i % 4;
-              const isRed = (row + col) % 2 === 0;
-
+              const isRed = (Math.floor(i / 2) + (i % 2)) % 2 === 0;
               return (
                 <Link
                   key={id}
                   href={`/services#${id}`}
-                  className={`group relative flex flex-col items-center justify-center gap-2.5 md:gap-3 rounded-xl p-4 md:p-6 text-center transition-all duration-200 hover:scale-[1.03] hover:shadow-lg ${
+                  className={`group relative flex flex-col items-center justify-center gap-2.5 rounded-xl p-4 text-center transition-all duration-200 hover:scale-[1.03] hover:shadow-lg ${
                     isRed
                       ? "bg-primary text-white shadow-md shadow-primary/20"
                       : "bg-white text-secondary border border-gray-200 shadow-sm"
                   }`}
                 >
                   <span
-                    className={`w-9 h-9 md:w-10 md:h-10 flex items-center justify-center transition-transform duration-200 group-hover:scale-110 ${
+                    className={`w-9 h-9 flex items-center justify-center transition-transform duration-200 group-hover:scale-110 ${
                       isRed ? "text-white/90" : "text-primary"
                     }`}
                   >
                     <Icon />
                   </span>
-                  <span className="text-xs md:text-sm font-semibold leading-tight">
-                    {shortLabel ? (
-                      <>
-                        <span className="md:hidden">{shortLabel}</span>
-                        <span className="hidden md:inline">{label}</span>
-                      </>
-                    ) : (
-                      label
-                    )}
+                  <span className="text-xs font-semibold leading-tight">
+                    {shortLabel ?? label}
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+
+          {/* Desktop: 4-col checkerboard */}
+          <div className="hidden lg:grid lg:grid-cols-4 gap-3">
+            {serviceItems.map(({ id, label, Icon }, i) => {
+              const isRed = (Math.floor(i / 4) + (i % 4)) % 2 === 0;
+              return (
+                <Link
+                  key={id}
+                  href={`/services#${id}`}
+                  className={`group relative flex flex-col items-center justify-center gap-3 rounded-xl p-6 text-center transition-all duration-200 hover:scale-[1.03] hover:shadow-lg ${
+                    isRed
+                      ? "bg-primary text-white shadow-md shadow-primary/20"
+                      : "bg-white text-secondary border border-gray-200 shadow-sm"
+                  }`}
+                >
+                  <span
+                    className={`w-10 h-10 flex items-center justify-center transition-transform duration-200 group-hover:scale-110 ${
+                      isRed ? "text-white/90" : "text-primary"
+                    }`}
+                  >
+                    <Icon />
+                  </span>
+                  <span className="text-sm font-semibold leading-tight">
+                    {label}
                   </span>
                 </Link>
               );
