@@ -8,11 +8,11 @@ import {
   Car, Lock, FileText, Droplets,
 } from "./components/icons";
 
-const serviceItems = [
+const serviceItems: { id: string; label: string; shortLabel?: string; Icon: () => React.JSX.Element }[] = [
   { id: "general-liability", label: "General Liability", Icon: Shield },
   { id: "property-coverage", label: "Property Coverage", Icon: HomeIcon },
   { id: "workers-compensation", label: "Workers Compensation", Icon: Calendar },
-  { id: "disability", label: "Disability & Paid Family Leave", Icon: User },
+  { id: "disability", label: "Disability & Paid Family Leave", shortLabel: "Disability & PFL", Icon: User },
   { id: "umbrella-coverage", label: "Umbrella / Excess", Icon: Umbrella },
   { id: "builders-risk", label: "Builders Risk", Icon: Building },
   { id: "inland-marine", label: "Inland Marine", Icon: Ship },
@@ -141,7 +141,7 @@ export default function HomePage() {
             </h2>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 md:gap-3">
-            {serviceItems.map(({ id, label, Icon }, i) => {
+            {serviceItems.map(({ id, label, shortLabel, Icon }, i) => {
               const row = Math.floor(i / 4);
               const col = i % 4;
               const isRed = (row + col) % 2 === 0;
@@ -164,7 +164,14 @@ export default function HomePage() {
                     <Icon />
                   </span>
                   <span className="text-xs md:text-sm font-semibold leading-tight">
-                    {label}
+                    {shortLabel ? (
+                      <>
+                        <span className="md:hidden">{shortLabel}</span>
+                        <span className="hidden md:inline">{label}</span>
+                      </>
+                    ) : (
+                      label
+                    )}
                   </span>
                 </Link>
               );

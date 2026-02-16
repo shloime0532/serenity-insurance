@@ -55,7 +55,7 @@ function Initials({ name }: { name: string }) {
 }
 
 export default function TestimonialsCarousel() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "center" }, [
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start", startIndex: 0 }, [
     Autoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: true }),
   ]);
   const [selectedIndex, setSelectedIndex] = useState(0);

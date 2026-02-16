@@ -4,7 +4,7 @@ export default function WhatsAppButton() {
       href="https://wa.me/16469924399"
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-40 flex items-center gap-2 bg-[#25D366] text-white px-4 py-3 rounded-full shadow-lg hover:bg-[#1da851] transition-colors"
+      className="fixed bottom-20 right-4 md:bottom-6 md:right-6 z-40 flex items-center gap-2 bg-[#25D366] text-white px-4 py-3 rounded-full shadow-lg hover:bg-[#1da851] transition-colors"
       aria-label="Message us on WhatsApp"
     >
       <svg
