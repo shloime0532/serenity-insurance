@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ContactForm from "./components/ContactForm";
 import TestimonialsCarousel from "./components/TestimonialsCarousel";
+import HeroCarousel from "./components/HeroCarousel";
 import {
   Shield, Home as HomeIcon, Calendar, User, Umbrella, Building,
   Ship, Wrench, UserCircle, Briefcase, Box, Users,
@@ -31,30 +32,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section
-        id="home"
-        className="relative min-h-[80vh] flex items-center bg-cover bg-center"
-        style={{ backgroundImage: "url('/assets/workerslooking.png')" }}
-      >
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="container relative z-10 py-24 pt-[calc(70px+6rem)] md:pt-[calc(85px+6rem)]">
-          <div className="max-w-2xl text-white">
-            <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-4">
-              Reliable Property &amp; Casualty coverage tailored to your industry
-            </h1>
-            <p className="text-lg md:text-xl text-white/80 mb-8">
-              Minimize risks and maintain business continuity with insurance
-              solutions built for companies of all sizes.
-            </p>
-            <a
-              href="#contact"
-              className="inline-block px-8 py-3.5 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-colors text-lg"
-            >
-              Contact Us
-            </a>
-          </div>
-        </div>
-      </section>
+      <HeroCarousel />
 
       {/* Welcome */}
       <section id="about" className="py-20">
