@@ -3,7 +3,6 @@ import Link from "next/link";
 import ContactForm from "./components/ContactForm";
 import TestimonialsCarousel from "./components/TestimonialsCarousel";
 import HeroCarousel from "./components/HeroCarousel";
-import AboutCarousel from "./components/AboutCarousel";
 import {
   Shield, Home as HomeIcon, Calendar, User, Umbrella, Building,
   Ship, Wrench, UserCircle, Briefcase, Box, Users,
@@ -39,7 +38,15 @@ export default function HomePage() {
       <section id="about" className="py-20">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <AboutCarousel />
+            <div className="rounded-xl overflow-hidden shadow-lg">
+              <Image
+                src="/assets/conferenceroom.png"
+                alt="Business Meeting"
+                width={600}
+                height={400}
+                className="w-full h-auto"
+              />
+            </div>
             <div>
               <h2 className="text-2xl md:text-3xl font-bold text-secondary mb-4">
                 We Protect What Matters Most to You
