@@ -1,6 +1,5 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
@@ -26,24 +25,9 @@ const slides = [
 ];
 
 export default function HeroCarousel() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
-    Autoplay({ delay: 6000, stopOnInteraction: false, stopOnMouseEnter: true }),
+  const [emblaRef] = useEmblaCarousel({ loop: true }, [
+    Autoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: true }),
   ]);
-  const [selectedIndex, setSelectedIndex] = useState(0);
-
-  const onSelect = useCallback(() => {
-    if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedScrollSnap());
-  }, [emblaApi]);
-
-  useEffect(() => {
-    if (!emblaApi) return;
-    emblaApi.on("select", onSelect);
-    onSelect();
-    return () => {
-      emblaApi.off("select", onSelect);
-    };
-  }, [emblaApi, onSelect]);
 
   return (
     <section id="home" className="relative">
@@ -76,22 +60,6 @@ export default function HeroCarousel() {
             </div>
           ))}
         </div>
-      </div>
-
-      {/* Dots */}
-      <div className="absolute bottom-6 left-0 right-0 z-10 flex justify-center gap-2.5">
-        {slides.map((slide, i) => (
-          <button
-            key={slide.image}
-            aria-label={`Go to slide ${i + 1}`}
-            onClick={() => emblaApi?.scrollTo(i)}
-            className={`h-2.5 rounded-full transition-all duration-300 ${
-              i === selectedIndex
-                ? "bg-white w-7"
-                : "bg-white/50 w-2.5 hover:bg-white/70"
-            }`}
-          />
-        ))}
       </div>
     </section>
   );
